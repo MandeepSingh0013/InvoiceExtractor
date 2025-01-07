@@ -9,7 +9,7 @@ import google.generativeai as genai
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 print("all set")
 
-model=genai.GenerativeModel("gemini-pro-vision")
+model=genai.GenerativeModel("gemini-1.5-flash")
 
 def get_gemini_response(input,image,promt):
     repsonse=model.generate_content([input,image[0],promt])
